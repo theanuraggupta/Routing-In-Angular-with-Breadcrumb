@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-12 col-md-4 col-lg-4" *ngFor="let product of products">
+    <div
+      class="card m-2 rounded"
+      (click)="productSelected(product)"
+      style="cursor:pointer"
+    >
+      <div class="card-title mb-0 p-2 clearfix bg-primary text-white">
+        <p class="float-left">{{product.make}}</p>
+        <p class="float-right">Price : {{product.price}}</p>
+      </div>
+      <div class="card-body p-2 bg-dark text-white">
+        <div class="row">
+          <div class="col-sm-4 col-md-4">Color</div>
+          <div class="col-sm-2 col-md-2">:</div>
+          <div class="col-sm-6 col-md-6">{{product.color}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-md-4">RAM</div>
+          <div class="col-sm-2 col-md-2">:</div>
+          <div class="col-sm-6 col-md-6">{{product.ram}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-md-4">Hard Disk</div>
+          <div class="col-sm-2 col-md-2">:</div>
+          <div class="col-sm-6 col-md-6">{{product.rom}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

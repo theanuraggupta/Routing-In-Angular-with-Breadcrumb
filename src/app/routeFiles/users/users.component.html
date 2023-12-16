@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6">
+    <a
+      *ngFor="let user of users"
+      [routerLink]="['/user', user.id, user.name]"
+      style="display:block"
+    >
+      {{ user.name }}
+    </a>
+    <a [routerLink]="['/user', '40', 'Mani']" style="display:block">Mani</a>
+  </div>
+  <div class="col-md-6">
+    <user></user>
+  </div>
+</div>
